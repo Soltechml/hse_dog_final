@@ -1,27 +1,24 @@
 from enum import Enum
 from fastapi import FastAPI, HTTPException, Query, Path, Body
 from pydantic import BaseModel
+from typing import List
 import time
 
 app = FastAPI()
-
 
 class DogType(str, Enum):
     terrier = "terrier"
     bulldog = "bulldog"
     dalmatian = "dalmatian"
 
-
 class Dog(BaseModel):
     name: str
     pk: int
     kind: DogType
 
-
 class Timestamp(BaseModel):
     id: int
     timestamp: int
-
 
 dogs_db = {
     0: Dog(name='Bob', pk=0, kind=DogType.terrier),
@@ -38,27 +35,23 @@ post_db = [
     Timestamp(id=1, timestamp=10)
 ]
 
-
 @app.get('/')
 def root():
     return "Welcome to our dog API-service"
 
-
 @app.post('/post', response_model=Timestamp)
 def create_post():
-    new_id = max(post_db[-1].id + 1, len(dogs_db))  # Используем максимальный ID из списка post или текущее количество собак
+    new_id = max(post_db[-1].id + 1, len(dogs_db))
     timestamp = int(time.time())
     new_post = Timestamp(id=new_id, timestamp=timestamp)
     post_db.append(new_post)
     return new_post
 
-
-@app.get('/dogs/', response_model=list[Dog])
+@app.get('/dogs/', response_model=List[Dog])
 def read_dogs(kind: DogType = Query(None, alias="type")):
     if kind:
         return [dog for dog in dogs_db.values() if dog.kind == kind]
     return list(dogs_db.values())
-
 
 @app.post('/dogs/', response_model=Dog)
 def create_dog(dog: Dog):
@@ -67,14 +60,12 @@ def create_dog(dog: Dog):
     dogs_db[dog.pk] = dog
     return dog
 
-
 @app.get('/dogs/{pk}', response_model=Dog)
 def read_dog(pk: int = Path(...)):
     dog = dogs_db.get(pk)
     if dog is None:
         raise HTTPException(status_code=404, detail="Dog not found")
     return dog
-
 
 @app.patch('/dogs/{pk}', response_model=Dog)
 def update_dog(pk: int = Path(...), dog_update: Dog = Body(...)):
@@ -86,5 +77,3 @@ def update_dog(pk: int = Path(...), dog_update: Dog = Body(...)):
     updated_dog = stored_dog_model.copy(update=update_data)
     dogs_db[pk] = updated_dog
     return updated_dog
-
-print(dogs_db)
