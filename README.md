@@ -14,9 +14,9 @@ Body
     "kind": "bulldog"
 }
 
-5. Реализовано получение списка собак [https://dog-api-vggc.onrender.com/dogs/](https://dog-api-vggc.onrender.com/dogs/)
-6. Реализовано получение собаки по id [https://dog-api-vggc.onrender.com/dogs/1](https://dog-api-vggc.onrender.com/dogs/1) | [https://dog-api-vggc.onrender.com/dogs/2](https://dog-api-vggc.onrender.com/dogs/2)
-7. Реализовано получение собак по типу [https://dog-api-vggc.onrender.com/dogs/?type=terrier](https://dog-api-vggc.onrender.com/dogs/?type=terrier)
+5. Реализовано получение списка собак GET [https://dog-api-vggc.onrender.com/dogs/](https://dog-api-vggc.onrender.com/dogs/)
+6. Реализовано получение собаки по id GET [https://dog-api-vggc.onrender.com/dogs/1](https://dog-api-vggc.onrender.com/dogs/1) | [https://dog-api-vggc.onrender.com/dogs/2](https://dog-api-vggc.onrender.com/dogs/2)
+7. Реализовано получение собак по типу GET [https://dog-api-vggc.onrender.com/dogs/?type=terrier](https://dog-api-vggc.onrender.com/dogs/?type=terrier)
 8. Реализовано обновление собаки по id
 
 PATCH https://dog-api-vggc.onrender.com/dogs/1
