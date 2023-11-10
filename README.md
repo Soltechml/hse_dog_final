@@ -19,7 +19,7 @@ Body
 7. Реализовано получение собак по типу: GET [https://dog-api-vggc.onrender.com/dogs/?type=terrier](https://dog-api-vggc.onrender.com/dogs/?type=terrier)
 8. Реализовано обновление собаки по id:
 
-PATCH https://dog-api-vggc.onrender.com/dogs/1
+Можно протестировать PATCH https://dog-api-vggc.onrender.com/dogs/1
 
 Body 
 {
