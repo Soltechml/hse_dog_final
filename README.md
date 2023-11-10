@@ -21,6 +21,7 @@ Body
 
 PATCH https://dog-api-vggc.onrender.com/dogs/1
 
+Body 
 {
     "name": "Updated Name",
     "pk": 1,
