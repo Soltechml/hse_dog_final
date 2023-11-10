@@ -2,7 +2,7 @@
 
 1. Создан и оформлен гитхаб
 2. Реализован путь / - [https://dog-api-vggc.onrender.com/](https://dog-api-vggc.onrender.com/)
-3. Реализован путь: POST https://dog-api-vggc.onrender.com/post 
+3. Реализован путь POST https://dog-api-vggc.onrender.com/post 
 4. Реализована запись собак:
 
    Можно протестировать POST https://dog-api-vggc.onrender.com/dogs/
