@@ -1,9 +1,9 @@
 # Создание API-сервиса для ветеринарной клиники | Автор: Синецкий Андрей
 
 1. Создан и оформлен гитхаб
-2. Реализован путь / - [https://dog-api-vggc.onrender.com/](https://dog-api-vggc.onrender.com/)
-3. Реализован путь POST https://dog-api-vggc.onrender.com/post 
-4. Реализована запись собак
+2. Реализован путь /: - [https://dog-api-vggc.onrender.com/](https://dog-api-vggc.onrender.com/)
+3. Реализован путь: POST https://dog-api-vggc.onrender.com/post 
+4. Реализована запись собак:
 
    Можно протестировать POST https://dog-api-vggc.onrender.com/dogs/
 
@@ -29,9 +29,9 @@ Body
 }
 
 
-9. Сервис открывается по ссылке [https://dog-api-vggc.onrender.com/](https://dog-api-vggc.onrender.com/)  (Надеюсь правильно понял задание, в чате уточнял.)
+9. Сервис открывается по ссылке: [https://dog-api-vggc.onrender.com/](https://dog-api-vggc.onrender.com/)  (Надеюсь правильно понял задание, в чате уточнял.)
 
-10. Документация совпадает с заданием
+10. Документация совпадает с заданием:
 
 - Создан публичный репозиторий на GitHub ✅
 - Указаны лицензии и создан .gitignore ✅
